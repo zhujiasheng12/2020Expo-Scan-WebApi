@@ -12,6 +12,7 @@ namespace ScanWebApi.Controllers
 {
     //[EnableCors(origins: "*", headers: "*", methods: "*")]
     [TokenCheckFilter]
+    //[AllowAnonymous]
     public class ScanMethodController : BaseApiController
     {
 

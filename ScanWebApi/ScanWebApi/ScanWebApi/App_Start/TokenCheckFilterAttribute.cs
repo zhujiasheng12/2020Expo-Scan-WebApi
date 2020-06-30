@@ -20,7 +20,8 @@ namespace ScanWebApi.App_Start
         /// <param name="actionContext"></param>
         public override void OnAuthorization(HttpActionContext actionContext)
         {
-            var content = actionContext.Request.Properties["MS_HttpContext"] as HttpContextBase;
+            //var content = actionContext.Request.Properties["MS_HttpContext"] as HttpContextBase;
+
             //获取token（请求头里面的值）
             var token = HttpContext.Current.Request.Headers["TokenValue"] ?? "";
             //是否为空
