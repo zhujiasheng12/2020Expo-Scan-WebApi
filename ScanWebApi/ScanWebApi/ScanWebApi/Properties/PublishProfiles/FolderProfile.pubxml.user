@@ -254,10 +254,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>08/08/2018 12:18:16</publishTime>
     </File>
     <File Include="bin/ScanWebApi.dll">
-      <publishTime>06/30/2020 09:22:15</publishTime>
+      <publishTime>06/30/2020 10:58:16</publishTime>
     </File>
     <File Include="bin/ScanWebApi.pdb">
-      <publishTime>06/30/2020 09:22:15</publishTime>
+      <publishTime>06/30/2020 10:58:16</publishTime>
     </File>
     <File Include="bin/System.Net.Http.Formatting.dll">
       <publishTime>11/28/2018 13:00:36</publishTime>
@@ -422,7 +422,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>06/29/2020 13:21:02</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>06/30/2020 09:20:39</publishTime>
+      <publishTime>06/30/2020 10:50:49</publishTime>
     </File>
   </ItemGroup>
 </Project>
