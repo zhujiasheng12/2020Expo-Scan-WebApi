@@ -107,3 +107,4 @@ C:\Users\82144\Desktop\2020中国上海压铸展\ScanWebApi\ScanWebApi\ScanWebAp
 C:\Users\82144\Desktop\2020中国上海压铸展\ScanWebApi\ScanWebApi\ScanWebApi\bin\System.Web.Http.Cors.xml
 C:\Users\82144\Desktop\2020中国上海压铸展\ScanWebApi\ScanWebApi\ScanWebApi\bin\System.Web.Http.Owin.dll
 C:\Users\82144\Desktop\2020中国上海压铸展\ScanWebApi\ScanWebApi\ScanWebApi\bin\System.Web.Http.Owin.xml
+C:\Users\82144\Desktop\2020中国上海压铸展\ScanWebApi\ScanWebApi\ScanWebApi\obj\Debug\ScanWebApi.csprojAssemblyReference.cache

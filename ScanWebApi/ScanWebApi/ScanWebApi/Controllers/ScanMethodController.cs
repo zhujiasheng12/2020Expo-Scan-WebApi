@@ -10,7 +10,7 @@ using System.Web.Http.Cors;
 
 namespace ScanWebApi.Controllers
 {
-    [EnableCors(origins: "*", headers: "*", methods: "*")]
+    //[EnableCors(origins: "*", headers: "*", methods: "*")]
     [TokenCheckFilter]
     public class ScanMethodController : BaseApiController
     {
