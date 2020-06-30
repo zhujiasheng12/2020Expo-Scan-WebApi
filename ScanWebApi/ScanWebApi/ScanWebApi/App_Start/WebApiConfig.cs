@@ -17,7 +17,7 @@ namespace ScanWebApi
            // config.SuppressDefaultHostAuthentication();
             //config.Filters.Add(new HostAuthenticationFilter(OAuthDefaults.AuthenticationType));
             //config.EnableCors(new EnableCorsAttribute("*", "*", "*"));
-            // Web API 配置和服务
+            // Web API 配置和服务，，，，，，
 
             // Web API 路由
             config.MapHttpAttributeRoutes();
