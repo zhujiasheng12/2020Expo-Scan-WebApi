@@ -21,10 +21,10 @@ namespace ScanWebApi.Controllers
         /// <summary>
         /// token值 登录后赋值请求api的时候添加到header中
         /// </summary>
-        public static  object TokenValue { get; set; } = "";
+        public object TokenValue { get; set; } = "";
         /// <summary>
         /// 登录者账号
         /// </summary>
-        public static string LoginID { get; set; } = "";
+        public string LoginID { get; set; } = "";
     }
 }

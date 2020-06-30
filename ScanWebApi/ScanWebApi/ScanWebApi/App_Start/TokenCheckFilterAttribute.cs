@@ -14,6 +14,8 @@ namespace ScanWebApi.App_Start
 {
     public class TokenCheckFilterAttribute : AuthorizeAttribute
     {
+
+
         /// <summary>
         /// 重写基类的验证方式，加入自定义的Ticket验证
         /// </summary>
@@ -24,6 +26,7 @@ namespace ScanWebApi.App_Start
 
             //获取token（请求头里面的值）
             var token = HttpContext.Current.Request.Headers["TokenValue"] ?? "";
+            token = token.Replace(",", "");
             //是否为空
             if (!string.IsNullOrEmpty(token.ToString()))
             {
@@ -53,13 +56,19 @@ namespace ScanWebApi.App_Start
             string userName = strTicket.Substring(0, index);
             string password = strTicket.Substring(index + 1);
             //取得session，不通过说明用户退出，或者session已经过期
-            var token = HttpContext.Current.Session[userName];
-            if (token == null)
-                return false;
-            //对比session中的令牌
-            if (token.ToString() == encryptToken)
+            if (userName == "jdserver" && password == "123456")
+            {
                 return true;
-            return false;
+            }
+            else
+            { return false; }
+            //var token = HttpContext.Current.Session[userName];
+            //if (token == null)
+            //    return false;
+            ////对比session中的令牌
+            //if (token.ToString() == encryptToken)
+            //    return true;
+            //return false;
         }
         /// <summary>
         /// 重写HandleUnauthorizedRequest

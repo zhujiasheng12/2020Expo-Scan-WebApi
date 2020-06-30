@@ -31,5 +31,6 @@ namespace ScanWebApi.Controllers
             HttpContext.Current.Session[LoginID] = _token;
             return Json(new { ret = 1, data = _token, msg = "登录成功！" });
         }
+
     }
 }
