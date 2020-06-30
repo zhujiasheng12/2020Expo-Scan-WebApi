@@ -5,10 +5,12 @@ using System.Net;
 using System.Net.Http;
 using System.Web;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Security;
 
 namespace ScanWebApi.Controllers
 {
+    //[EnableCors(origins: "*", headers: "*", methods: "*")]
     [AllowAnonymous]
     public class LoginController : BaseApiController
     {

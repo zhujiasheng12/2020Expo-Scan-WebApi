@@ -10,8 +10,13 @@ namespace ScanWebApi
     {
         public static void Register(HttpConfiguration config)
         {
-
-            config.EnableCors(new EnableCorsAttribute("*", "*", "*"));
+            //打开跨域支持
+            config.EnableCors();
+            // Web API 配置和服务
+            // 将 Web API 配置为仅使用不记名令牌身份验证。
+           // config.SuppressDefaultHostAuthentication();
+            //config.Filters.Add(new HostAuthenticationFilter(OAuthDefaults.AuthenticationType));
+            //config.EnableCors(new EnableCorsAttribute("*", "*", "*"));
             // Web API 配置和服务
 
             // Web API 路由
