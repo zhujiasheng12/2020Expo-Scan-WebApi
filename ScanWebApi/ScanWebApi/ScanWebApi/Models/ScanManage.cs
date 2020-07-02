@@ -82,13 +82,14 @@ namespace ScanWebApi.Models
                 }
                 catch (Exception ex)
                 {
-                    return ex.Message;
                     lpMsg = "";
+                    return ex.Message;
+
                 }
             }
             else
             {
-                return "ok";
+                return "二维码内容错误："+lpMsg;
             }
 
         }

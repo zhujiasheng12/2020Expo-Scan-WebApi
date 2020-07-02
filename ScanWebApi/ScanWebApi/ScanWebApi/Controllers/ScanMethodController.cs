@@ -28,7 +28,7 @@ namespace ScanWebApi.Controllers
         {
             try
             {
-                result = HttpContext.Current.Request["result"];
+                result = HttpContext.Current.Request.Form["result"];
                 return Json ( ScanManage.ScanMethod(result));
             }
             catch (Exception ex)
