@@ -26,7 +26,7 @@ namespace ScanWebApi.Controllers
         {
             try
             {
-               ScanManage.ScanMethod(result);
+                ScanManage.ScanMethod(result);
             }
             catch (Exception ex)
             {

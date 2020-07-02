@@ -1,0 +1,66 @@
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Show</title>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>
+        function hh() {
+
+            var ticket = ""; //存放登录成功以后的Ticket信息
+            $.ajax({
+                url: 'http://localhost:44394/api/ScanMethod/GetData',
+                type: 'GET',
+                dataType: 'json',
+                beforeSend: function(XHR) {
+                    //发送ajax请求之前向http的head里面加入验证信息
+                    XHR.setRequestHeader('TokenValue', $("#tex").val());
+                }
+            }).success(function(result) {
+                if (result != null) {
+                    console.log(result)
+                }
+
+            }).error(function(data) {
+                alert("获取数据失败");
+            });
+        }
+
+        function login() {
+
+            $.ajax({
+                url: 'http://localhost:44394/api/Login/Login',
+                data: {
+                    uName: 'jdserver',
+                    uPassword: '123456',
+                },
+                type: 'get',
+                dataType: 'json',
+            }).success(function(result) {
+                if (result != null) {
+                    $("#tex").val(result.data);
+                }
+
+            }).error(function(data) {
+                alert("获取数据失败");
+            });
+        }
+    </script>
+</head>
+
+<body>
+
+    <div>
+        <input type="text" name="username" value="jdserver" /></br>
+        <input type="text" name="pwd" value="123456" /></br>
+        <button id="login" onclick="login()">登陆</button></br>
+
+    </div>
+    </br>
+    </br>
+
+    Token： ViewBag.pp </br>
+    </br>
+    </br>
+    <button id="test" onclick="hh()">测试</button></br>
+    <input type="text " id="tex" value="无" /></br>
+
+</body>
