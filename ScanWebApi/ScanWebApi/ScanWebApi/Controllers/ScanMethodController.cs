@@ -1,10 +1,12 @@
-﻿using ScanWebApi.App_Start;
+﻿using Microsoft.Ajax.Utilities;
+using ScanWebApi.App_Start;
 using ScanWebApi.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Web;
 using System.Web.Http;
 using System.Web.Http.Cors;
 
@@ -22,14 +24,16 @@ namespace ScanWebApi.Controllers
         /// <param name="result"></param>
         /// <returns></returns>
         [HttpPost]
-        public void PostScan([FromBody] string result)
+        public IHttpActionResult PostScan([FromBody] string result)
         {
             try
             {
-                ScanManage.ScanMethod(result);
+                result = HttpContext.Current.Request["result"];
+                return Json ( ScanManage.ScanMethod(result));
             }
             catch (Exception ex)
             {
+                return Json(ex.Message);
             }
         }
 
